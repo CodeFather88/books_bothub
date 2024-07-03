@@ -10,6 +10,7 @@ import { JwtModule } from '@nestjs/jwt';
 import { options } from '@auth/config';
 import { MailerModule } from './mailer/mailer.module';
 import { UtilsModule } from './utils/utils.module';
+import { BookModule } from './book/book.module';
 
 @Module({
 	imports: [
@@ -20,6 +21,7 @@ import { UtilsModule } from './utils/utils.module';
 		AuthModule,
 		MailerModule,
 		UtilsModule,
+		BookModule,
 	],
 	controllers: [AppController],
 	providers: [AppService, ...GUARDS],
