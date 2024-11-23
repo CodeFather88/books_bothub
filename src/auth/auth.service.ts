@@ -15,11 +15,6 @@ export class AuthService {
 		private readonly mailerService: MailerService,
 	) {}
 
-	async testmail() {
-		return null;
-		// return await this.mailerService.sendMail('lolkek0v7777@gmail.com', );
-	}
-
 	async register(dto: RegisterDto, agent: string) {
 		const newUser = await this.userService.create(dto);
 		if (!newUser) {
